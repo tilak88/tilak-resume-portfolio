@@ -1,0 +1,248 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Arkadeep Das, Manas Daruka, Ayush Sharma, Abhinav Gupta
+% Modified for Tilak Sharma
+% License : MIT
+%-------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% ---- MARGIN TIGHTENED to fit single page ----
+\geometry{left=1.4cm, top=0.55cm, right=1.2cm, bottom=0.55cm}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+  frame code={},
+  center title,
+  left=0pt,
+  right=0pt,
+  top=0pt,
+  bottom=0pt,
+  colback=gray!20,
+  colframe=white,
+  width=\dimexpr\textwidth\relax,
+  enlarge left by=-2mm,
+  boxsep=4pt,
+  arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{\textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}}
+}
+
+\newcommand{\resumePOR}[3]{
+  \vspace{0.5mm}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}}
+  \end{tabular*}
+  \vspace{-3mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0.5mm}\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#4}} \\
+    \textit{\footnotesize{#3}} & \footnotesize{#2}\\
+  \end{tabular*}
+  \vspace{-2.4mm}
+}
+
+% Command logic: #1=Name, #2=Stack, #3=Date(RightTop), #4=Link(RightBottom)
+\newcommand{\resumeProject}[4]{
+  \vspace{0.5mm}\item
+  \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\footnotesize{#3}} \\
+    \footnotesize{\textit{#2}} & \footnotesize{#4}
+  \end{tabular*}
+  \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{1mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-3mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-3mm}}
+\newcommand{\cvsection}[1]{%
+  \vspace{2mm}
+  \begin{tcolorbox}
+    \textbf{\large #1}
+  \end{tcolorbox}
+  \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%%  DEFINE ELEMENTS HERE  %%%%%%%
+\newcommand{\name}{Tilak Sharma} % Your Name
+\newcommand{\course}{M.Tech - Computer Science and Engineering} % Your Course
+\newcommand{\roll}{254101061} % Your Roll No.
+\newcommand{\phone}{9348961872} % Your Phone Number
+\newcommand{\emaila}{s.tilak@iitg.ac.in} %Email 1
+\newcommand{\emailb}{tilaksharmareal@gmail.com} %Email 2
+\newcommand{\github}{tilak88} %Github
+\newcommand{\website}{https://github.com/tilak88} %Website
+\newcommand{\linkedin}{tilak88} %linkedin
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+  \includegraphics[width=2cm,clip]{iitg_logo.jpg}
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+  \begin{tabularx}{\linewidth}{L r}
+    \textbf{\LARGE \name} & +91-\phone\\
+    {Roll No.:\roll} & \href{mailto:\emaila}{\emaila} \\
+    \course & \href{mailto:\emailb}{\emailb}\\
+    {Indian Institute Of Technology, Guwahati} & \href{https://github.com/\github}{Github} $|$ \href{https://www.linkedin.com/in/\linkedin/}{LinkedIn}
+  \end{tabularx}
+}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\setlength{\tabcolsep}{5pt}
+\small{\begin{tabularx}{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+\hline
+\textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+\hline
+M.Tech. & Indian Institute Of Technology, Guwahati & 8.44 & 2025-Present\\
+\hline
+B.Tech. & Indira Gandhi Institute Of Technology, Sarang & 9.22 & 2021-2025\\
+\hline
+Senior Secondary & Central Board Of Secondary Education (CBSE) & 86.4\% & 2020 \\
+\hline
+Secondary & Central Board Of Secondary Education (CBSE) & 93.6\% & 2018 \\
+\hline
+\end{tabularx}}
+\vspace{-2mm}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Qualcomm $|$ AI Security Research}
+  {Interim Engineering Intern, Bengaluru $|$ LLM Red-Teaming, Jailbreak Defenses, On-Device AI Safety}
+  {Jun 2026 -- Present}{}
+
+\resumeItemListStart
+  \item {Built an \textbf{on-device LLM jailbreak benchmark of 4,000 attack-model evaluations} spanning \textbf{8 attack families} (GCG/DSN adversarial suffixes, TAP, GPTFuzzer, Skeleton Key, Base64/ROT13/Leet/Bijection encodings) against quantized (W4A16) \textbf{Qwen3-4B and Llama-3.1-8B} deployed on the \textbf{Snapdragon X Elite NPU} via Qualcomm Genie runtime.}
+  \item {Researched and evaluated \textbf{36 input-level jailbreak defenses} (perplexity/entropy filtering, erase-and-check, retokenization, encoded-content and adversarial-suffix detection), distilling \textbf{17 detectors into 3 deployable pipelines}; improved evaluated safe rate from \textbf{37.98\% to 91.78\%} (jailbreak success \textbf{62.03\% $\rightarrow$ 8.23\%}) at \textbf{86.74\% TPR / 0.70\% FPR} with \textbf{sub-millisecond} median latency, validated for benign false positives on \textbf{52,002} Alpaca instructions.}
+  \item {Designed residual \textbf{output-level guards} -- refusal detection, harmful-compliance heuristics, and tiny-model safety-guard hybrid routing -- achieving a \textbf{96.15\% final jailbreak catch rate} in the cascaded input+output defense stack.}
+  \item {Developed an end-to-end \textbf{automated red-teaming harness}: attack generation $\rightarrow$ input defenses $\rightarrow$ NPU inference $\rightarrow$ \textbf{StrongREJECT-style LLM-judge scoring} (A100-hosted), with resumable JSONL logging, row validation, CLI evaluation, and an on-device guarded-chatbot demo.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6.8mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+% Project 1: Master Thesis
+\resumeProject
+  {Master's Thesis $|$ Hallucination-Aware AI-Generated Content Detection}
+  {Supervisor: Dr. Sanasam Ranbir Singh, Professor, Dept. of CSE, IIT Guwahati $|$ NLP, AI Safety}
+  {2025 -- Present}{}
+
+\resumeItemListStart
+  \item {Built a \textbf{first-of-its-kind benchmark of 7,000+ paired} human- and LLM-generated NCERT solutions (Grades 6--12, Math \& Science) -- the first labeled corpus targeting hallucination in Indian K-12 STEM. Engineered a domain-agnostic PDF parsing pipeline using the Gemini 2.5 Pro API with structured JSON extraction, achieving zero-configuration parsing across all NCERT formats.}
+  \item {Designing a hallucination detection model based on spectral analysis of LLM attention patterns, framing attention as a directed graph and training a logistic regression probe to detect pathological information-flow indicative of confabulation.}
+\resumeItemListEnd
+
+% Project 2: Binoculars
+\resumeProject
+  {Zero-Shot LLM Detection Framework (Binoculars Architecture)}
+  {Tech Stack: PyTorch, HuggingFace Transformers $|$ Reproduction of ICML 2024 Paper}
+  {2025}{}
+
+\resumeItemListStart
+  \item {Developed a robust AI-text detector from scratch using PyTorch and HuggingFace, successfully reproducing the state-of-the-art Binoculars (Log-Perplexity / Cross-Perplexity) architecture. Achieved \textbf{97\% detection accuracy, 0\% false negative rate}, and 6\% false positive rate on the HC3 ChatGPT benchmark.}
+  \item {Extended the baseline with a novel Token Agreement Rate metric to capture greedy decoding patterns, and developed Semantic Attractor Drift to measure meaning-shift via intermediate transformer hidden states.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6.8mm}
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+\resumeHeadingSkillStart
+\resumeSubItem{Programming Languages}{C, C++, Python}
+\resumeSubItem{ML \& Deep Learning}{PyTorch, HuggingFace Transformers, Scikit-Learn, OpenCV, Pandas, NumPy, Unsloth, Ollama}
+\resumeSubItem{Research Areas}{LLM Safety \& Red-Teaming, Jailbreak Attacks \& Defenses, On-Device/Quantized LLM Inference (NPU), LLM Evaluation \& Detection, Hallucination Analysis, Benchmark Construction, Spectral Graph Methods}
+\resumeHeadingSkillEnd
+
+%-----------KEY COURSES TAKEN-----------------
+\section{Key Courses Taken}
+\resumeHeadingSkillStart
+\resumeSubItem{Core Computer Science}{Data Structures \& Algorithms, Machine Learning, DBMS, Operating Systems, Computer Networks}
+\resumeSubItem{Online Certifications}{Supervised Machine Learning -- Andrew Ng (Coursera); Cisco Networking Academy: Cybersecurity Essentials; Python Essentials.}
+\resumeHeadingSkillEnd
+
+%-----------POSITIONS OF RESPONSIBILITY-----------------
+\section{Positions of Responsibility}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Speaker Team Member}{TEDxIITGuwahati -- scouting and reaching out to potential speakers for the event}{Jul 2026 -- Present}
+\resumePOR{Delegate}{Yuva Sangam Student Exchange Program, Ministry of Education, Govt. of India}{May 2023}
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+%-----------ACHIEVEMENTS-----------------
+\section{Achievements}
+\vspace{-1.7mm}
+\resumeSubHeadingListStart
+\resumePOR{GATE CS 2025}{All India Rank \textbf{416} among 1,70,825 candidates - \textbf{Top 0.3\%} }{2025}
+\resumeSubHeadingListEnd
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+%-------------------------------------------
+\end{document}

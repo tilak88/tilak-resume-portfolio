@@ -1,0 +1,17 @@
+.tools/
+.venv/
+repos/
+Projects/
+CV Guidelines.pdf
+Current_Resume.pdf
+*.aux
+*.log
+*.out
+*.synctex.gz
+resumes/*_preview.png
+resumes/*.pdf
+resumes/texput.*
+evidence/*
+Links.txt
+Notes.txt
+latex_code.tex

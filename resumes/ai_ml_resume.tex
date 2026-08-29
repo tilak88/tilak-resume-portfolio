@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{iitg_resume}
+\begin{document}
+\makeheader
+
+\section{Education}
+\small{\begin{tabularx}{\dimexpr\textwidth-6pt\relax}{|>{\centering\arraybackslash}p{2.7cm}|X|c|c|}\hline
+\shortstack{\textbf{Degree/}\\\textbf{Certificate}} & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\\hline
+M.Tech. & Indian Institute Of Technology, Guwahati & 8.44 & 2025--Present\\\hline
+B.Tech. & Indira Gandhi Institute Of Technology, Sarang & 9.22 & 2021--2025\\\hline
+Senior Secondary & Central Board Of Secondary Education (CBSE) & 86.4\% & 2020\\\hline
+Secondary & Central Board Of Secondary Education (CBSE) & 93.6\% & 2018\\\hline
+\end{tabularx}}\vspace{-3pt}
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeProject{Qualcomm $|$ AI Security Research}{AI Security Research Intern, Bengaluru $|$ LLM Safety, Red-Teaming, On-Device AI}{Jun 2026 -- Present}{}
+\resumeItemListStart
+\item Built a reproducible LLM jailbreak evaluation and defense toolkit spanning attack generation, 17 input detectors, calibrated pipeline profiles, NPU inference, LLM-judge scoring, JSONL checkpoints, CLI/SDK interfaces, and a guarded-chatbot demo.
+\item Evaluated 36 input-level defenses across GCG/DSN, TAP, GPTFuzzer, Skeleton Key, and encoded-prompt attacks; measured detector TPR/FPR, benign false positives, latency, and held-out behavior across named datasets.
+\item Built an HF-to-ONNX-to-QAIRT/Genie deployment path for a Gemma 3 4B Instruct model on Snapdragon X Elite NPU: four graph partitions, prompt/decode graph switching, KV-cache contracts, mixed-precision analysis, manifests, runtime validation, and SDK-native profiling.
+\resumeItemListEnd
+\resumeSubHeadingListEnd\vspace{-5pt}
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProject{Master's Thesis $|$ Evidence-Backed Agentic PDF Extraction}{Supervisor: Dr. Sanasam Ranbir Singh, IIT Guwahati $|$ NLP, Information Extraction, AI Safety}{2025 -- Present}{\href{https://github.com/tilak88/evigraph-document-intelligence}{GitHub}}
+\resumeItemListStart
+\item Architecting EviGraph, a schema-adaptive PDF record-extraction workflow with typed agent contracts, page/region provenance, a Document Evidence Graph, constrained global assembly, independent evidence verification, bounded repair, and calibrated accept/review/abstain routing.
+\item Building an evidence-backed benchmark and extraction pipeline for heterogeneous educational PDFs, preserving exact source regions, assets, warnings, validation results, and processing traces in structured JSONL.
+\resumeItemListEnd
+\resumeProject{Zero-Shot AI-Text Detection $|$ Binoculars Extensions}{PyTorch, HuggingFace Transformers, scikit-learn $|$ ICML 2024 reproduction and extensions}{2025}{\href{https://github.com/tilak88/tilak-binoculars-extensions}{GitHub}}
+\resumeItemListStart
+\item Reproduced observer/performer perplexity detection and added single-pass token features: surprisal trajectory curvature, cross-model rank-discordance variance, rank volatility, roughness, and token agreement rate.
+\item Evaluated 5,422 balanced samples across CNN-Falcon, CNN-Llama, PubMed, and HC3; stratified logistic-regression fusion improved reported HC3 AUROC from 0.9873 to 0.9923.
+\resumeItemListEnd
+\resumeProject{Macro Placement Optimization $|$ ML for Electronic Design Automation}{Python, Simulated Annealing, ISPD 2005, OpenROAD}{Jan 2026 -- Apr 2026}{\href{https://github.com/tilak88/tilak-macro-placement}{GitHub}}
+\resumeItemListStart
+\item Diagnosed why standalone macro-HPWL gains regressed after OpenROAD placement, then redesigned the search objective around halo spacing, spread/fragmentation, dynamic overlap weighting, and net-neighbor-guided moves.
+\item Implemented legality-aware placement parsing, incremental HPWL/overlap evaluation, deterministic annealing, and post-search legalization for hard-macro placement.
+\resumeItemListEnd
+\resumeSubHeadingListEnd\vspace{-5pt}
+
+\section{Technical Skills}
+\resumeHeadingSkillStart
+\resumeSubItem{Programming}{Python, C++, C, SQL, Bash/PowerShell}
+\resumeSubItem{ML/AI}{PyTorch, HuggingFace Transformers, scikit-learn, NumPy, Pandas, OpenCV, LLM evaluation, NLP, information extraction}
+\resumeSubItem{AI Safety}{LLM red-teaming, jailbreak defenses, safety evaluation, hallucination detection, provenance, selective acceptance, benchmark design}
+\resumeSubItem{Systems/Tools}{QAIRT/Genie, NPU inference, ONNX, OpenROAD, Git, Linux, JSONL, REST/CLI tooling}
+\resumeHeadingSkillEnd
+
+\section{Key Courses Taken}
+\resumeHeadingSkillStart
+\resumeSubItem{Core Computer Science}{Data Structures and Algorithms, Machine Learning, DBMS, Operating Systems, Computer Networks}
+\resumeHeadingSkillEnd
+
+\end{document}

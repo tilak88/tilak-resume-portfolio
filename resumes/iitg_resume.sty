@@ -1,0 +1,39 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{iitg_resume}[2026/08/29 IIT Guwahati resume layout]
+\RequirePackage[a4paper,left=1.35cm,right=1.15cm,top=0.55cm,bottom=0.55cm]{geometry}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage{xcolor}
+\RequirePackage{tabularx}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{ragged2e}
+\RequirePackage{array}
+\RequirePackage{multicol}
+\RequirePackage{graphicx}
+\urlstyle{same}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\tabcolsep}{0pt}
+\raggedright
+\titleformat{\section}{\vspace{-3pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule\vspace{-6pt}]
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={},itemsep=0pt,topsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,label={},itemsep=0pt,topsep=0pt]}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=2.6ex,rightmargin=1ex,noitemsep,topsep=0pt,parsep=0pt,label=\small$\vcenter{\hbox{\tiny$\bullet$}}$]\small}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-3pt}}
+\newcommand{\resumeSubheading}[4]{\vspace{1pt}\item\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X@{\hspace{0.8em}}r}\textbf{#1} & \textit{\footnotesize #4}\\[-1pt]\textit{\footnotesize #3} & \footnotesize #2\end{tabularx}\vspace{-2pt}}
+\newcommand{\resumeProject}[4]{\vspace{1pt}\item\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X@{\hspace{0.8em}}r}\textbf{#1} & \textit{\footnotesize #3}\\[-1pt]\footnotesize\textit{#2} & \footnotesize #4\end{tabularx}\vspace{-2pt}}
+\newcommand{\resumePOR}[3]{\vspace{1pt}\item\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}\textbf{#1},\hspace{1pt}#2 & \textit{\footnotesize #3}\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeSubItem}[2]{\item\textbf{#1}: #2}
+\newcommand{\makeheader}{%
+\parbox{2.15cm}{\IfFileExists{iitg_logo.jpg}{\includegraphics[width=1.75cm,clip]{iitg_logo.jpg}}{}}%
+\parbox{\dimexpr\textwidth-2.15cm\relax}{\begin{tabularx}{\linewidth}{X r}
+{\LARGE\textbf{Tilak Sharma}} & +91-9348961872\\
+{Roll No.: 254101061} & \href{mailto:s.tilak@iitg.ac.in}{s.tilak@iitg.ac.in}\\
+{M.Tech - Computer Science and Engineering} & \href{mailto:tilaksharmareal@gmail.com}{tilaksharmareal@gmail.com}\\
+{Indian Institute Of Technology, Guwahati} & \href{https://github.com/tilak88}{GitHub} $|$ \href{https://www.linkedin.com/in/tilak88/}{LinkedIn}
+\end{tabularx}}\vspace{-4pt}}

@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{iitg_resume}
+\begin{document}
+\makeheader
+
+\section{Education}
+\small{\begin{tabularx}{\dimexpr\textwidth-6pt\relax}{|>{\centering\arraybackslash}p{2.7cm}|X|c|c|}\hline
+\shortstack{\textbf{Degree/}\\\textbf{Certificate}} & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\\hline
+M.Tech. & Indian Institute Of Technology, Guwahati & 8.44 & 2025--Present\\\hline
+B.Tech. & Indira Gandhi Institute Of Technology, Sarang & 9.22 & 2021--2025\\\hline
+Senior Secondary & Central Board Of Secondary Education (CBSE) & 86.4\% & 2020\\\hline
+Secondary & Central Board Of Secondary Education (CBSE) & 93.6\% & 2018\\\hline
+\end{tabularx}}\vspace{-3pt}
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeProject{Qualcomm $|$ AI Security Research}{AI Security Research Intern, Bengaluru $|$ Systems, Runtime, Evaluation Infrastructure}{Jun 2026 -- Present}{}
+\resumeItemListStart
+\item Engineered a reproducible LLM safety evaluation runtime with attack generation, detector registries, parallel/sequential pipelines, resumable JSONL orchestration, row quarantine, structured result contracts, CLI/SDK facades, and a browser demo.
+\item Built QAIRT/Genie deployment infrastructure for a Gemma 3 4B Instruct model on Snapdragon X Elite NPU: HF-to-ONNX conversion, four-part graph partitioning, prompt/token lanes, compile/link/package orchestration, KV-cache and RoPE contracts, manifests, and validation gates.
+\item Profiled accelerator behavior from SDK-native events and separated static bundle validity, NPU execution, content quality, and performance evidence; analyzed mixed-precision candidates while preserving reproducibility and release caveats.
+\resumeItemListEnd
+\resumeSubHeadingListEnd\vspace{-5pt}
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProject{Macro Placement Optimization $|$ ML for EDA}{Python, Simulated Annealing, ISPD 2005, OpenROAD}{Jan 2026 -- Apr 2026}{\href{https://github.com/tilak88/tilak-macro-placement}{GitHub}}
+\resumeItemListStart
+\item Built a hard-macro placement engine with Bookshelf parsers, incremental HPWL/overlap evaluation, deterministic simulated annealing, spatial legality checks, halo/spread penalties, and post-search legalization.
+\item Debugged an objective mismatch between macro-only optimization and full OpenROAD placement; added whitespace- and routability-aware cost terms with net-neighbor-guided moves to improve downstream robustness.
+\resumeItemListEnd
+\resumeProject{AI-Text Detection Platform $|$ Binoculars Extensions}{Python, PyTorch, HuggingFace, scikit-learn}{2025}{\href{https://github.com/tilak88/tilak-binoculars-extensions}{GitHub}}
+\resumeItemListStart
+\item Implemented a testable observer/performer detector and feature-fusion pipeline with checkpointing, stratified metrics, ablations, and explicit negative-result tracking across 5,422 samples.
+\item Added token-level surprisal curvature, rank-discordance, rank volatility, roughness, and agreement features; reported HC3 fusion AUROC improvement from 0.9873 to 0.9923.
+\resumeItemListEnd
+\resumeProject{Master's Thesis $|$ Agentic Document Intelligence}{Python, FastAPI/Pydantic design, JSON Schema, evidence graphs}{2025 -- Present}{\href{https://github.com/tilak88/evigraph-document-intelligence}{GitHub}}
+\resumeItemListStart
+\item Designing typed agent workflows for schema compilation, PDF parsing/OCR routing, field-level provenance, deterministic constraint solving, independent verification, bounded repair, and risk-based human review.
+\resumeItemListEnd
+\resumeSubHeadingListEnd\vspace{-5pt}
+
+\section{Technical Skills}
+\resumeHeadingSkillStart
+\resumeSubItem{Languages}{C++, Python, C, SQL, Bash/PowerShell}
+\resumeSubItem{Systems}{Operating Systems, Computer Networks, concurrency fundamentals, profiling, runtime contracts, deployment automation, testing}
+\resumeSubItem{ML Infrastructure}{PyTorch, HuggingFace Transformers, ONNX, QAIRT/Genie, OpenROAD, scikit-learn, JSONL pipelines, CLI/SDK design}
+\resumeSubItem{Engineering}{Git, Linux, REST APIs, data validation, checkpointing, failure handling, reproducibility, performance analysis}
+\resumeHeadingSkillEnd
+
+\section{Key Courses Taken}
+\resumeHeadingSkillStart
+\resumeSubItem{Core Computer Science}{Data Structures and Algorithms, Machine Learning, DBMS, Operating Systems, Computer Networks}
+\resumeHeadingSkillEnd
+
+\end{document}
